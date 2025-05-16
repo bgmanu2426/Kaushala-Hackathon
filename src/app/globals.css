@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 95%; /* #f2f2f2 Light Gray */
+    --foreground: 0 0% 20%; /* #333333 Dark Gray for text */
+
+    --card: 0 0% 100%; /* #ffffff White for cards */
+    --card-foreground: 0 0% 20%; /* Dark Gray text on cards */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 207 70% 53%; /* #3498db Calming Blue */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    --secondary: 0 0% 90%; /* #e6e6e6 Neutral gray for secondary elements */
+    --secondary-foreground: 0 0% 20%; /* Dark text on secondary gray */
+
+    --muted: 0 0% 90%; 
+    --muted-foreground: 0 0% 45.1%; /* Lighter gray text for muted content */
+
+    --accent: 145 63% 49%; /* #2ecc71 Green */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 87%; /* #dedede */
+    --input: 0 0% 87%;  /* Border for inputs */
+    --ring: 207 70% 53%; /* Primary blue for focus rings */
+
+    --radius: 0.5rem;
+
+    /* AttendVisor specific custom variables */
+    --attendvisor-header-bg: hsl(var(--primary));
+    --attendvisor-header-fg: hsl(var(--primary-foreground));
+  }
+
+  .dark {
+    /* A basic dark theme */
+    --background: 224 71% 4%;/* #0A0F1E very dark blue */
+    --foreground: 210 40% 98%; /* almost white */
+
+    --card: 222 69% 7%; /* #0C1324 slightly lighter dark blue */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 207 70% 53%; /* #3498db Calming Blue */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    --secondary: 216 34% 17%; /* #1D283A dark grayish blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 216 34% 17%;
+    --muted-foreground: 210 40% 60%; /* lighter gray */
+
+    --accent: 145 63% 49%; /* #2ecc71 Green */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%; /* darker red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 216 34% 20%; /* #232F43 */
+    --input: 216 34% 20%;
+    --ring: 207 70% 53%;
+
+    --attendvisor-header-bg: hsl(var(--primary));
+    --attendvisor-header-fg: hsl(var(--primary-foreground));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Font will be handled by Geist Sans in layout.tsx */
+  }
+}
